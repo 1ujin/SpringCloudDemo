@@ -1,0 +1,14 @@
+server:
+  port: 8081
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    #是否需要获取服务信息 因为自己是注册中心server所以为false
+    fetch-registry: false
+    #是否需要将自己注册到注册中心(注册中心集群需要设置为true) 因为自己是注册中心server所以为false
+    register-with-eureka: false
+    #配置eureka服务器地址
+    #https://blog.csdn.net/u011531425/article/details/81713441
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:8082/eureka/
