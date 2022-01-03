@@ -15,9 +15,9 @@ public class UdpServerApplication {
         SpringApplication.run(UdpServerApplication.class, args);
         // 定义接收数据的字节数组
         byte[] buf = new byte[1024];
-        // 指定接收数据的端口为9000
+        // 指定接收数据的端口为 9000
         try (DatagramSocket ds = new DatagramSocket(9002)) {
-            // 指定接收数据的长度为1024
+            // 指定接收数据的长度为 1024
             DatagramPacket dp1 = new DatagramPacket(buf, 1024);
             System.out.println("等待接收数据...");
             while (true) {
