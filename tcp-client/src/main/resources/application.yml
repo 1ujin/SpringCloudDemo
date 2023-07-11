@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: tcp-client
+server:
+  port: 8084
